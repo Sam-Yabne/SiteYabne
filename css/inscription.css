@@ -1,0 +1,106 @@
+/* =========================
+   Variables & bases
+   ========================= */
+:root{
+  --blue:#26a6d4;
+  --blue-strong:#1e9ac7;
+  --text:#111;
+  --border:#e6e9ee;
+  --container:1100px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0}
+body{
+  font:400 16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text); background:#fff;
+}
+.wrap{max-width:var(--container); margin-inline:auto; padding:0 20px}
+
+/* =========================
+   Topbar
+   ========================= */
+.topbar img{display:block; width:100%; max-width:1000px; height:auto; margin:0 auto}
+
+/* =========================
+   Navigation
+   ========================= */
+.mainnav{border-block:2px solid var(--blue); margin-top:10px}
+.menu{
+  display:flex; flex-wrap:wrap; justify-content:center; align-items:center;
+  gap:24px; list-style:none; padding:14px 0; margin:0;
+}
+.menu a{
+  display:inline-block; padding:10px 14px;
+  color:var(--text); text-decoration:none; letter-spacing:.3px; font-weight:600; border-radius:6px;
+}
+.menu a.active{background:var(--blue); color:#fff; box-shadow:0 2px 0 var(--blue-strong) inset}
+.nav-toggle{display:none; background:none; border:0; font-size:1.6rem; line-height:1; cursor:pointer}
+
+.subline{border-block:1px solid var(--blue); background:#fff}
+.under-title{margin:10px 0; text-align:center; font-weight:600}
+.under-title a{text-decoration:none; color:inherit}
+.under-title a:hover{color:var(--blue)}
+
+/* =========================
+   Contenu
+   ========================= */
+.content{padding:40px 0 20px}
+
+.ins-title{
+  margin:0 0 28px;
+  font-size:clamp(28px, 5vw, 48px);
+  letter-spacing:.5px;
+  color:var(--blue);
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+/* Encadré simple */
+.ins-box{
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:24px 26px;
+  background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+  max-width:900px;
+}
+.ins-box p{margin:0 0 12px}
+
+/* Bouton principal */
+.btn-primary{
+  display:inline-block; padding:10px 16px; border-radius:6px;
+  background:var(--blue); color:#fff; text-decoration:none; font-weight:700;
+  box-shadow:0 1px 0 rgba(0,0,0,.05) inset; border:1px solid rgba(0,0,0,.06);
+}
+.btn-primary:hover{background:var(--blue-strong)}
+
+/* =========================
+   Footer
+   ========================= */
+.footer{
+  margin-top:80px; padding:48px 0 64px; text-align:center;
+  background:#2f2e2b; color:#cfd2d6;
+}
+
+/* =========================
+   Breakpoints
+   ========================= */
+@media (max-width:1100px){
+  :root{--container:92vw}
+}
+@media (max-width:700px){
+  .mainnav,.mainnav .wrap{position:relative}
+  .nav-toggle{
+    display:block; position:absolute; right:20px; top:8px; z-index:3;
+    padding:8px 10px; background:none; border:0;
+  }
+  .menu{
+    display:none; flex-direction:column; align-items:stretch;
+    gap:16px; padding:8px; margin-top:44px; border-top:1px solid #e5e7eb;
+    position:relative; z-index:2; background:#fff;
+  }
+  .menu.open{display:flex}
+  .topbar img{max-width:92vw}
+}

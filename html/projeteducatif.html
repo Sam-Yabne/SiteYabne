@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecole Yabné Henri Schilli – Projet Educatif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/projeteducatif.css" />
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="../html/accueil.html">
+        <img src="../img/fond.png" alt="Ecole Yabné Henri Schilli">
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../html/accueil.html">ACCUEIL</a></li>
+        <li><a class="active" href="../html/projeteducatif.html">PROJET EDUCATIF</a></li>
+        <li><a href="../html/historique.html">HISTORIQUE</a></li>
+        <li><a href="../html/document.html">DOCUMENTS</a></li>
+        <li><a href="#">INSCRIPTION</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="subline">
+  <div class="wrap">
+    <p class="under-title">
+      <a href="https://www.yabne.org/newsite/" target="_blank" rel="noopener noreferrer">
+        COLLÈGE LYCÉE YABNÉ
+      </a>
+    </p>
+  </div>
+</div>
+
+  </nav>
+<br>
+  <!-- Contenu -->
+  <main class="wrap content-grid">
+    <aside class="left-col">
+      <a class="cta-red" href="../html/projetmaternelle.html">PROJET PÉDAGOGIQUE<br>MATERNELLE</a>
+      <a class="cta-red" href="../html/projetelementaire.html">PROJET PÉDAGOGIQUE<br>ÉLÉMENTAIRE</a>
+    </aside>
+
+    <section class="right-col">
+      <h2 class="page-title">PROJET EDUCATIF</h2>
+
+      <div class="text">
+        <p>L’Ecole Primaire Henri Schilli est un Etablissement Privé sous contrat d’association avec l’Etat, et elle est soumise aux règles et lois en vigueur de l’Education Nationale. L’école présente cependant des caractères qui lui sont propres. C’est une école juive fidèle à la Torah, fidèle à Israël, ouverte sur le monde, la cité et la communauté. L’école a à cœur de dispenser une éducation et une culture juive solides en même temps qu’un enseignement général d’excellence, permettant aux élèves de se construire, d’apprendre et d’agir en tant que citoyen.</p>
+
+        <p>L’esprit de l’école est fait de respect, de bienveillance et de rigueur. Le goût de l’étude, le sérieux, la motivation sont les outils de choix qui mettent l’élève dans les conditions optimales d’épanouissement et de réussite tant sur le plan scolaire que sur le plan humain.</p>
+
+        <p>L’Ecole Primaire Henri Schilli est une communauté éducative au centre de laquelle est placé l’enfant et qui regroupe les parents, les enseignants et les élèves. L’échange, le dialogue, la communication sont les fondements de cette communauté dans un souci de connaissance et d’estime réciproque des personnes qui la composent.</p>
+
+        <p><strong>Notre école vise l’épanouissement, la réussite scolaire et la construction de l’identité juive de tous les élèves.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-bottom">
+    <div class="wrap"><hr></div>
+    <div class="wrap footer-inner">
+      <p>© Henri Schilli 2025 | Ecole Maternelle et Élémentaire</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

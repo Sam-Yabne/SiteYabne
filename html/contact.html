@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecole Yabné Henri Schilli – Contact</title>
+
+  <!-- Perf fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+
+  <!-- Bandeau -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="../html/accueil.html">
+        <img src="../img/fond.png" alt="Ecole Yabné Henri Schilli">
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../html/accueil.html">ACCUEIL</a></li>
+        <li><a href="../html/projeteducatif.html">PROJET EDUCATIF</a></li>
+        <li><a href="../html/historique.html">HISTORIQUE</a></li>
+        <li><a href="../html/document.html">DOCUMENTS</a></li>
+        <li><a href="../html/inscription.html">INSCRIPTION</a></li>
+        <li><a class="active" href="../html/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="subline">
+  <div class="wrap">
+    <p class="under-title">
+      <a href="https://www.yabne.org/newsite/" target="_blank" rel="noopener noreferrer">
+        COLLÈGE LYCÉE YABNÉ
+      </a>
+    </p>
+  </div>
+</div>
+
+  </nav>
+
+  <!-- Contenu -->
+  <main class="wrap content">
+    <h1 class="contact-title">CONTACTER L'ÉCOLE</h1>
+
+    <section class="card">
+      <ul class="contact-list">
+        <li>
+          <strong>Par Courrier : </strong>
+          <address>
+            Ecole YABNÉ HENRI SCHILLI, 29/41 Avenue Léon Bollée – 75013 PARIS
+          </address>
+        </li>
+        <li>
+          <strong>Par Email : </strong>
+          <a href="mailto:henri_schilli@yahoo.fr">henri_schilli@yahoo.fr</a>
+        </li>
+        <li>
+          <strong>Par Téléphone : </strong>
+          <a href="tel:+33144248500">01 44 24 85 00</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="wrap">
+      <p>© Henri Schilli 2025 | Ecole Maternelle et Élémentaire</p>
+    </div>
+  </footer>
+
+  <!-- JS burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu');
+      if(!toggle || !menu) return;
+
+      toggle.addEventListener('click', function(){
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+
+      // Active l'onglet courant si le fichier est renommé
+      var here = location.pathname.split('/').pop();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if(a.getAttribute('href') && a.getAttribute('href').endsWith(here)){
+          a.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

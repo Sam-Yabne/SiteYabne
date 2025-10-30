@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecole Yabné Henri Schilli – Projet pédagogique Maternelle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/projetmaternelle.css" />
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="../html/accueil.html">
+        <img src="../img/fond.png" alt="Ecole Yabné Henri Schilli">
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../html/accueil.html">ACCUEIL</a></li>
+        <li><a href="../html/projeteducatif.html">PROJET EDUCATIF</a></li>
+        <li><a href="../html/historique.html">HISTORIQUE</a></li>
+        <li><a href="../html/document.html">DOCUMENTS</a></li>
+        <li><a href="../html/inscription.html">INSCRIPTION</a></li>
+        <li><a href="../html/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+   <div class="subline">
+  <div class="wrap">
+    <p class="under-title">
+      <a href="https://www.yabne.org/newsite/" target="_blank" rel="noopener noreferrer">
+        COLLÈGE LYCÉE YABNÉ
+      </a>
+    </p>
+  </div>
+</div>
+
+  </nav>
+
+  <!-- Contenu -->
+  <main class="wrap content">
+    <h2 class="page-title">PROJET PÉDAGOGIQUE MATERNELLE</h2>
+
+    <section class="block">
+      <h3>DOMAINES D'APPRENTISSAGE</h3>
+      <p>Toutes les classes sont sous contrat avec l’État. Nous suivons les instructions officielles de l’Éducation
+        Nationale ; il y a 6 domaines d’activités.</p>
+      <ul class="list">
+        <li>S’approprier le langage.</li>
+        <li>Découvrir l’écrit.</li>
+        <li>Devenir élève.</li>
+        <li>Agir et s’exprimer avec son corps.</li>
+        <li>Découvrir le monde.</li>
+        <li>Percevoir, sentir, imaginer, créer.</li>
+      </ul>
+      <p>Le travail sur les sons de la parole, l’acquisition du principe alphabétique, le développement du lexique et des
+        gestes de l’écriture préparent l’apprentissage systématique de la lecture et de l’écriture qui commencera au cours
+        préparatoire.</p>
+    </section>
+
+    <section class="block">
+      <h3>DOMAINES D’APPRENTISSAGE DE KODESH</h3>
+      <ul class="list">
+        <li>Apprentissage de la Tefila du matin et des diverses Brachot.</li>
+        <li>Initiation à l’hébreu.</li>
+        <li>Parachat Hashavoua.</li>
+        <li>Familiarisation avec le calendrier des fêtes juives.</li>
+        <li>Travail sur les valeurs juives.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h3>ACTIVITÉS DE PÉDAGOGIE INFORMELLE</h3>
+      <ul class="list">
+        <li>Psychomotricité.</li>
+        <li>Sorties éducatives.</li>
+        <li>Bibliothèque.</li>
+        <li>Initiation à l’anglais à partir de la grande section.</li>
+        <li>Ateliers aquatiques en piscine à partir de la grande section de maternelle.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Bas de page -->
+  <footer class="page-bottom">
+    <div class="wrap"><hr></div>
+    <div class="wrap footer-inner">
+      <p>© Henri Schilli 2025 | Ecole Maternelle et Élémentaire</p>
+    </div>
+  </footer>
+
+  <!-- JS burger robuste -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu');
+      if(!toggle || !menu) return;
+
+      toggle.addEventListener('click', function(){
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+
+      // Optionnel : marquer automatiquement le lien actif
+      var here = location.pathname.split('/').pop(); // ex: "projetmaternelle.html"
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if(a.getAttribute('href') && a.getAttribute('href').endsWith(here)){
+          a.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

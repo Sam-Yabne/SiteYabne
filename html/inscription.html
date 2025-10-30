@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecole Yabné Henri Schilli – Inscription</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/inscription.css" />
+</head>
+<body>
+
+  <!-- Bandeau -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="../html/accueil.html">
+        <img src="../img/fond.png" alt="Ecole Yabné Henri Schilli">
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../html/accueil.html">ACCUEIL</a></li>
+        <li><a href="../html/projeteducatif.html">PROJET EDUCATIF</a></li>
+        <li><a href="../html/historique.html">HISTORIQUE</a></li>
+        <li><a href="../html/document.html">DOCUMENTS</a></li>
+        <li><a class="active" href="../html/inscription.html">INSCRIPTION</a></li>
+        <li><a href="../html/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="subline">
+      <div class="wrap">
+        <p class="under-title">
+          <a href="https://www.yabne.org/newsite/" target="_blank" rel="noopener noreferrer">
+            COLLÈGE LYCÉE YABNÉ
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu -->
+  <main class="wrap content">
+    <h1 class="ins-title">INSCRIPTIONS</h1>
+
+    <section class="ins-box">
+      <p><strong>Chers Parents,</strong></p>
+      <p>
+        Vous envisagez d'inscrire votre (vos) enfant(s) dans notre établissement pour la prochaine rentrée scolaire
+        et nous vous en remercions.
+      </p>
+      <p>
+        Veuillez renseigner votre demande de pré-inscription, sur liste d’attente, en ligne via le lien suivant :
+      </p>
+
+      <p>
+        <a class="btn-primary" href="https://preinscriptions.ecoledirecte.com/?RNE=0752906B" target="_blank" rel="noopener">Lien de pré-inscription !</a>
+      </p>
+
+      <p>Le service des inscriptions.</p>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="wrap">
+      <p>© Henri Schilli 2025 | Ecole Maternelle et Élémentaire</p>
+    </div>
+  </footer>
+
+  <!-- JS menu burger -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu');
+      if(!toggle || !menu) return;
+
+      toggle.addEventListener('click', function(){
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+
+      // Active auto selon l'URL
+      var here = location.pathname.split('/').pop();
+      document.querySelectorAll('.menu a').forEach(function(a){
+        if(a.getAttribute('href') && a.getAttribute('href').endsWith(here)){
+          a.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

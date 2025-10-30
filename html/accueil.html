@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecole Yabné Henri Schilli – Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/accueil.css">
+  
+</head>
+<body>
+
+  <!-- Bandeau haut -->
+  <header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../html/accueil.html">
+      <img src="../img/fond.png" alt="Ecole Yabné Henri Schilli">
+    </a>
+  </div>
+</header>
+
+
+  <!-- Navigation -->
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a class="active" href="../html/accueil.html">ACCUEIL</a></li>
+        <li><a href="../html/projeteducatif.html">PROJET EDUCATIF</a></li>
+        <li><a href="../html/historique.html">HISTORIQUE</a></li>
+        <li><a href="../html/document.html">DOCUMENTS</a></li>
+        <li><a href="../html/inscription.html">INSCRIPTION</a></li>
+        <li><a href="../html/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="subline">
+  <div class="wrap">
+    <p class="under-title">
+      <a href="https://www.yabne.org/newsite/" target="_blank" rel="noopener noreferrer">
+        COLLÈGE LYCÉE YABNÉ
+      </a>
+    </p>
+  </div>
+</div>
+
+  </nav>
+
+  <!-- Contenu -->
+  <main>
+    <div class="wrap home-layout">
+      <!-- Colonne gauche : boutons rouges -->
+      <aside class="left-col">
+        <a class="cta-red" href="../html/projetmaternelle.html">PROJET PÉDAGOGIQUE<br>MATERNELLE</a>
+        <a class="cta-red" href="../html/projetelementaire.html">PROJET PÉDAGOGIQUE<br>ÉLÉMENTAIRE</a>
+      </aside>
+
+      <!-- Zone centrale -->
+      <section class="welcome">
+        <p>Bienvenue sur le site de l’Ecole Maternelle et Élémentaire <strong>Henri Schilli</strong>.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Gros pied de page sombre -->
+  <footer class="big-footer">
+    <div class="wrap">
+      <p>© Henri Schilli 2025 | Ecole Maternelle et Élémentaire</p>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('menu');
+    if(!toggle || !menu) return;
+
+    toggle.addEventListener('click', function(){
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
